@@ -202,12 +202,9 @@ h2 {
 }
 
 /* ---- About ------------------------------------------------ */
-#about .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
+
+
+#about { background: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
 
 #about p + p { margin-top: 1rem; }
 
@@ -242,40 +239,11 @@ h2 {
 }
 
 /* ---- Speakers / Topics ------------------------------------ */
-#topics { background: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
+#topics {border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
 
-.topics-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.25rem;
-  margin-top: 2.5rem;
-}
+/* ---- Programm and participants -------------------------------------------- */
 
-.topic-card {
-  background: var(--clr-card);
-  border: 1px solid var(--clr-border);
-  border-radius: var(--radius);
-  padding: 1.25rem 1.5rem;
-  transition: border-color 0.2s;
-}
-
-.topic-card:hover { border-color: var(--clr-primary); }
-
-.topic-card h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: var(--clr-text);
-}
-
-.topic-card p {
-  font-size: 0.85rem;
-  color: var(--clr-muted);
-  line-height: 1.5;
-}
-
-/* ---- Programme -------------------------------------------- */
-#programme { }
+#programme {background: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
 
 .programme-table {
   width: 100%;
@@ -309,7 +277,7 @@ h2 {
 .tba { color: var(--clr-muted); font-style: italic; }
 
 /* ---- Venue ------------------------------------------------ */
-#venue { background: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
+#venue {border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
 
 #venue .container {
   display: grid;
@@ -329,6 +297,20 @@ h2 {
 }
 
 .venue-map iframe { width: 100%; height: 100%; border: none; }
+
+#travel {
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+}
+#travel p {
+  color: var(--clr-muted);
+  margin-bottom: 0.75rem;
+}
+
+
+
+/* ---- Team ----------------------------------------- */
+#organizers {border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
 
 /* ---- Registration ----------------------------------------- */
 #register {}
