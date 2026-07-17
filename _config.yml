@@ -1,0 +1,13 @@
+title: "CW Satellite Workshop 2026 – IUCAA"
+description: "Satellite workshop on continuous gravitational waves, co-located with IUCAA, Pune – 2026"
+url: "https://jaspermartins.github.io"
+baseurl: "/cw-satellite-workshop-2026-iucaa"
+
+# We serve plain HTML — disable Jekyll theme and processing
+theme: null
+plugins: []
+
+# Expose all HTML/CSS/JS files as-is
+include:
+  - "index.html"
+  - "style.css"
