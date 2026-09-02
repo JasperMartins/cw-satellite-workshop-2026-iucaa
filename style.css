@@ -241,14 +241,55 @@ h2 {
 /* ---- Speakers / Topics ------------------------------------ */
 #topics {border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
 
-/* ---- Programm and participants -------------------------------------------- */
+/* ---- Program and participants ----------------------------- */
 
 #programme {background: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
+
+.speaker-group {
+  margin-top: 1.5rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  background: var(--clr-card);
+  overflow: hidden;
+}
+
+.speaker-group summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--clr-accent);
+  cursor: pointer;
+  list-style: none;
+}
+
+.speaker-group summary::-webkit-details-marker { display: none; }
+
+.speaker-group summary::after {
+  content: '+';
+  order: 3;
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.speaker-group[open] summary::after { content: '-'; }
+
+.speaker-group summary span {
+  margin-left: auto;
+  color: var(--clr-muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+#programme .activities { margin-top: 4rem; }
 
 .programme-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 2rem;
   font-size: 0.9rem;
 }
 
@@ -270,7 +311,6 @@ h2 {
 
 .programme-table td:first-child {
   color: var(--clr-primary);
-  white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
 
