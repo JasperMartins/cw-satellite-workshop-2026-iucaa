@@ -245,6 +245,154 @@ h2 {
 
 #programme {background: var(--clr-surface); border-top: 1px solid var(--clr-border); border-bottom: 1px solid var(--clr-border); }
 
+.schedule-fold {
+  margin-top: 1.5rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  background: var(--clr-card);
+  overflow: hidden;
+}
+
+.schedule-fold > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  color: var(--clr-accent);
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 600;
+  list-style: none;
+}
+
+.schedule-fold > summary::-webkit-details-marker { display: none; }
+
+.schedule-fold > summary::after {
+  content: '+';
+  order: 3;
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.schedule-fold[open] > summary::after { content: '-'; }
+
+.schedule-fold > summary span {
+  margin-left: auto;
+  color: var(--clr-muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.schedule-heading {
+  padding: 0.75rem 1rem 0;
+  text-align: right;
+}
+
+.schedule-heading a { font-size: 0.9rem; }
+
+.schedule-day {
+  margin-top: 1.5rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.schedule-day h4 {
+  padding: 0.9rem 1rem;
+  background: var(--clr-card);
+  color: var(--clr-accent);
+  font-size: 1.05rem;
+}
+
+.schedule-day h4 span {
+  color: var(--clr-muted);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.schedule-table-wrap { overflow-x: auto; }
+
+.schedule-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 0.65rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.schedule-table thead th {
+  color: var(--clr-muted);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+.schedule-table thead th:nth-child(1) { width: 12%; }
+.schedule-table thead th:nth-child(2) { width: 35%; }
+.schedule-table thead th:nth-child(3) { width: 17%; }
+.schedule-table thead th:nth-child(4) { width: 26%; }
+.schedule-table thead th:nth-child(5) { width: 10%; }
+
+.schedule-table td:first-child {
+  color: var(--clr-primary);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.schedule-table .session-row th {
+  padding: 0.5rem 0.75rem;
+  background: rgba(74, 158, 255, 0.08);
+  color: var(--clr-accent);
+  text-align: center;
+}
+
+.schedule-table .break-row td {
+  background: rgba(126, 200, 227, 0.06);
+  color: var(--clr-muted);
+  font-style: italic;
+}
+
+.schedule-table .event-row td { color: var(--clr-muted); }
+
+.talk-details summary {
+  color: var(--clr-text);
+  font-weight: 600;
+}
+
+.talk-details:not(.has-abstract) summary {
+  cursor: text;
+  list-style: none;
+  pointer-events: none;
+}
+
+.talk-details:not(.has-abstract) summary::-webkit-details-marker { display: none; }
+.talk-details:not(.has-abstract) p { display: none; }
+
+.talk-details.has-abstract summary { cursor: pointer; }
+.talk-details.has-abstract summary::marker { color: var(--clr-primary); }
+
+.talk-details p {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--clr-border);
+  color: var(--clr-muted);
+  font-size: 0.8rem;
+}
+
+.schedule-day-optional p {
+  padding: 0.9rem 1rem;
+  color: var(--clr-muted);
+}
+
 .speaker-group {
   margin-top: 1.5rem;
   border: 1px solid var(--clr-border);
